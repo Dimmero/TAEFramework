@@ -12,6 +12,7 @@ public class BaseWidgetFormTest extends BaseAbstractChromeTest {
     public BaseWidgetFormTest() throws TAUnknownBrowserException {
         super();
     }
+
     protected ProfileWidgetForm profileWidgetForm;
     protected Cookies cookies;
 
