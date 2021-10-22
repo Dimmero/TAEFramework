@@ -1,13 +1,13 @@
 package gloTests;
 
-import BaseTestGlo.BaseWidgetFormTest;
+import BaseTest.GloBaseWidgetFormTest;
 import TAExceptions.TAUnknownBrowserException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class WidgetFormWidgetFormTest extends BaseWidgetFormTest {
+public class WidgetFormWidgetFormTestGlo extends GloBaseWidgetFormTest {
 
-    public WidgetFormWidgetFormTest() throws TAUnknownBrowserException {
+    public WidgetFormWidgetFormTestGlo() throws TAUnknownBrowserException {
     }
 
     @Test

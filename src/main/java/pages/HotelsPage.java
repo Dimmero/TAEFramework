@@ -4,15 +4,22 @@ import BaseElements.BaseAbstractPage;
 import Core.TAEDriver;
 import Entities.HotelsSearch;
 import Entities.Travellers;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.PageFactory;
 import uicontrols.CustomSelect;
+import uicontrols.TravellersControl;
 
 public class HotelsPage extends BaseAbstractPage {
     public static String TITLE = "Search Hotels - PHPTRAVELS";
+    private static By SUBMIT = By.xpath("(//button[@id='submit'])[1]");
+
     CustomSelect cityDropdown;
+    TravellersControl travellersControl;
 
     public HotelsPage(TAEDriver driver) {
         super(driver, TITLE);
         cityDropdown = new CustomSelect("HotelCity", driver, "//span[@role='combobox']");
+        travellersControl = new TravellersControl("TravellersControl", driver, "(//a[@class='dropdown-toggle dropdown-btn travellers waves-effect'])[1]");
     }
 
     public HotelsPage selectCity(String cityName) {
@@ -21,12 +28,12 @@ public class HotelsPage extends BaseAbstractPage {
     }
 
     public HotelsPage setTravellers(Travellers travellers) {
-        //you code here
+        travellersControl.setTravellers(travellers);
         return this;
     }
 
     public HotelsPage submit() {
-        //your code
+        driver.getElement(SUBMIT).click();
         return this;
     }
 

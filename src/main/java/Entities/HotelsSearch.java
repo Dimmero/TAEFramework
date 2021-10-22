@@ -11,10 +11,10 @@ public class HotelsSearch {
 
     public HotelsSearch() {}
 
-    public HotelsSearch(String cityName, Date fromDate, Date toDate, Travellers travellers) {
+    public HotelsSearch(String cityName, Travellers travellers) {
         this.cityName = cityName;
-        this.fromDate = fromDate;
-        this.toDate = toDate;
+//        this.fromDate = fromDate;
+//        this.toDate = toDate;
         this.travellers = travellers;
     }
 
